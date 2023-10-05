@@ -12,20 +12,17 @@ require(['vs/editor/editor.main'], function () {
     theme: 'vs-dark'
   });
 
-  // Listen for changes in the editor content and send updates to the server
   editor.onDidChangeModelContent(() => {
     const code = editor.getValue();
     socket.emit('code-update', code);
   });
 
-  // Listen for updates from the server and update the editor content
   socket.on('receive-code', (code) => {
     editor.setValue(code);
   });
 });
 
-// Listen for cursor position changes and send updates to the server
-editor.onDidChangeCursorPosition((event) => {
+editor?.onDidChangeCursorPosition((event) => {
   const position = {
     lineNumber: event.position.lineNumber,
     column: event.position.column
@@ -33,7 +30,6 @@ editor.onDidChangeCursorPosition((event) => {
   socket.emit('cursor-position', position);
 });
 
-// Listen for cursor position updates from the server and update the editor
 socket.on('receive-cursor-position', (position) => {
   editor.setPosition(position);
 });
