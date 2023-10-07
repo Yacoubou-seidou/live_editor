@@ -143,7 +143,12 @@ To run the project, execute the following command:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Add more pages]**
+- [ ] **[Add challenges List on the editor page]**
+- [ ] **[Add chat functionnality on the editor page]**
+- [ ] **[Show Random challenge daily for each user on codeloccol intranet]**
+- [ ] **[Add success icon for each completed challenge and ranking]**
+- [ ] **[Add timer for each challenge]**
+- [ ] **[Limit acces daily for each user after daily challenge timer finished]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

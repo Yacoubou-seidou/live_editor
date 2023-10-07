@@ -15,3 +15,8 @@ body {
   width: 80%;
   min-height: 500px;
 }
+
+#console {
+  width: 30px;
+  height: 30;
+}
