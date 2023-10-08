@@ -12,13 +12,11 @@ require(['vs/editor/editor.main'], function () {
     theme: 'vs-dark'
   });
 
-  // Event listener for editor content changes
   editor.onDidChangeModelContent(() => {
     const code = editor.getValue();
     socket.emit('code-update', code);
   });
 
-  // Event listener for cursor position changes
   editor.onDidChangeCursorPosition(event => {
     const position = {
       lineNumber: event.position.lineNumber,
@@ -35,7 +33,6 @@ require(['vs/editor/editor.main'], function () {
     editor.setPosition(position);
   });
 
-  // Event listener for console messages
   socket.on('console-message', (message) => {
     displayConsoleMessage(message);
   });
@@ -47,8 +44,37 @@ function displayConsoleMessage(message) {
   newMessageElement.innerText = message;
   consoleElement.appendChild(newMessageElement);
 }
+let lineCounter = 1;
 
-// Function to log messages to the console
-function logToConsole(message) {
-  socket.emit('console-message', message);
+function runCode() {
+  const code = editor.getValue();
+  displayConsoleMessage('Running code...');
+  lineCounter = 1;
+  const originalConsoleLog = console.log;
+  let logOutput = '';
+
+  console.log = (...args) => {
+    const lineNumber = lineCounter++;
+    logOutput += `${lineNumber}> ${args.map(arg => JSON.stringify(arg)).join(' ')}\n`;
+  };
+
+  try {
+    eval(`(function() { ${code} })()`);
+    if (logOutput.trim() !== '') {
+      displayConsoleMessage('Code executed successfully. Console output:');
+      displayConsoleMessage(logOutput);
+    } else {
+      displayConsoleMessage('Code executed successfully. No console output.');
+    }
+  } catch (error) {
+    displayConsoleMessage('Error executing code: ' + error);
+  } finally {
+    console.log = originalConsoleLog;
+  }
 }
+
+function clearConsole() {
+  const consoleElement = document.getElementById('console');
+  consoleElement.innerHTML = '';
+}
+
