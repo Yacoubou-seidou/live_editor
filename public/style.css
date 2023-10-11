@@ -66,3 +66,13 @@ body {
   color: green;
   margin-right: 10px;
 }
+
+#messageInput {
+  width: 60%;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+}
