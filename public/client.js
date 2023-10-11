@@ -1,3 +1,4 @@
+const messageContainer = document.getElementById('messageContainer')
 const socket = io();
 let editor;
 
@@ -78,3 +79,23 @@ function clearConsole() {
   consoleElement.innerHTML = '';
 }
 
+function sendMessage() {
+  const messageInput = document.getElementById('messageInput');
+  const message = messageInput.value;
+  console.log(message);
+  // Emit the message to the server
+  socket.emit('chat-message', message);
+
+  // Clear the message input
+  messageInput.value = '';
+}
+
+socket.on('receive-chat-message', (message) => {
+  displayChatMessage(message);
+});
+
+function displayChatMessage(message) {
+  const newMessageElement = document.createElement('div');
+  newMessageElement.innerText = `<p><span>[User]:</span>${message}</p> `;
+  messageContainer.appendChild(newMessageElement);
+}
