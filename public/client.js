@@ -83,10 +83,8 @@ function sendMessage() {
   const messageInput = document.getElementById('messageInput');
   const message = messageInput.value;
   console.log(message);
-  // Emit the message to the server
   socket.emit('chat-message', message);
 
-  // Clear the message input
   messageInput.value = '';
 }
 
