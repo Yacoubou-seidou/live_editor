@@ -2,7 +2,11 @@
 
 <div align="center">
 
-  <h3><b>Live Editor</b></h3>
+  <h3><b>Live Editor Back-end</b></h3>
+  
+    <ul>
+    <li><a href="https://github.com/Yacoubou-seidou/live_editor_react">Link to the front-end React</a></li>
+  </ul>
 
 </div>
 
