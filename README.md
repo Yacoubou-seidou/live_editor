@@ -153,7 +153,6 @@ To run the project, execute the following command:
 - [ ] **[Add success icon for each completed challenge and ranking]**
 - [ ] **[Add timer for each challenge]**
 - [ ] **[Limit acces daily for each user after daily challenge timer finished]**
-- [ ] **[Swicth to React or Sveltekit]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
