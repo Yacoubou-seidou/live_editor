@@ -4,9 +4,7 @@
 
   <h3><b>Live Editor Back-end</b></h3>
   
-    <ul>
-    <li><a href="https://github.com/Yacoubou-seidou/live_editor_react">Link to the front-end React</a></li>
-  </ul>
+    <a href="https://github.com/Yacoubou-seidou/live_editor_react">Link to the front-end React</a>
 
 </div>
 
@@ -82,7 +80,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -91,7 +88,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -128,11 +124,9 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Yacoubou Seidou**
 
