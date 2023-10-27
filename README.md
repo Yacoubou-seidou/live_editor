@@ -35,26 +35,13 @@
 
 > Describe your project in 1 or 2 sentences.
 
-**[Live Editor]** is a real-time collaborative code editor where multiple users can write and edit code in a shared workspace
+**[Live Editor]** Back-end for a real-time collaborative code editor where multiple users can write and edit code in a shared workspace
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>HTML</summary>
-  <ul>
-    <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
-  </ul>
-</details>
-<details>
-  <summary>WebSockets</summary>
-  <ul>
-    <li><a href="https://fr.wikipedia.org/wiki/WebSocket">WebSockets</a></li>
-  </ul>
-</details>
 
 <details>
   <summary>JavaScript</summary>
@@ -117,7 +104,6 @@ Clone this repository to your desired folder:
 To run the project, execute the following command:
 
 ```sh
-  Open index.html in browser
   or
   open with Live server in Vscode
 ```
@@ -141,11 +127,6 @@ To run the project, execute the following command:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Add challenges List on the editor page]**
-- [ ] **[Add chat functionnality on the editor page]**
-- [ ] **[Show Random challenge daily for each user on codeloccol intranet]**
-- [ ] **[Add success icon for each completed challenge and ranking]**
-- [ ] **[Add timer for each challenge]**
 - [ ] **[Limit acces daily for each user after daily challenge timer finished]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
