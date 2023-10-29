@@ -61,9 +61,7 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[ syntax highlighting ]**
-- **[ auto-completion ]**
-- **[ cursor synchronization ]**
+- **[ Api ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
